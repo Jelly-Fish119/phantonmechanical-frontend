@@ -33,7 +33,8 @@ export function DashboardContent({
   return (
     <Container
       className={mergeClasses([layoutClasses.content, className])}
-      maxWidth={settings.state.compactLayout ? maxWidth : false}
+      // maxWidth={settings.state.compactLayout ? maxWidth : false}
+      maxWidth={false}
       sx={[
         (theme) => ({
           display: 'flex',

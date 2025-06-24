@@ -102,6 +102,7 @@ export const paths = {
     blank: `${ROOTS.DASHBOARD}/blank`,
     kanban: `${ROOTS.DASHBOARD}/kanban`,
     calendar: `${ROOTS.DASHBOARD}/calendar`,
+    schedule: `${ROOTS.DASHBOARD}/schedule`,
     fileManager: `${ROOTS.DASHBOARD}/file-manager`,
     permission: `${ROOTS.DASHBOARD}/permission`,
     general: {
@@ -130,7 +131,7 @@ export const paths = {
       cards: `${ROOTS.DASHBOARD}/client/cards`,
       profile: `${ROOTS.DASHBOARD}/client/profile`,
       account: `${ROOTS.DASHBOARD}/client/account`,
-      edit: (id: string) => `${ROOTS.DASHBOARD}/user/${id}/edit`,
+      edit: (id: string) => `${ROOTS.DASHBOARD}/client/${id}/edit`,
       demo: {
         edit: `${ROOTS.DASHBOARD}/client/${MOCK_ID}/edit`,
       },

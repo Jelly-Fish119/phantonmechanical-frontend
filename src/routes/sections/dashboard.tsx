@@ -50,6 +50,13 @@ const UserListPage = lazy(() => import('src/pages/dashboard/user/list'));
 const UserCreatePage = lazy(() => import('src/pages/dashboard/user/new'));
 const UserEditPage = lazy(() => import('src/pages/dashboard/user/edit'));
 
+// Client
+const ClientProfilePage = lazy(() => import('src/pages/dashboard/client/profile'));
+const ClientCardsPage = lazy(() => import('src/pages/dashboard/client/cards'));
+const ClientListPage = lazy(() => import('src/pages/dashboard/client/list'));
+const ClientCreatePage = lazy(() => import('src/pages/dashboard/client/new'));
+const ClientEditPage = lazy(() => import('src/pages/dashboard/client/edit'));
+
 // Service Log
 const ServiceLogListPage = lazy(() => import('src/pages/dashboard/servicelog/list'));
 
@@ -91,6 +98,8 @@ const PermissionDeniedPage = lazy(() => import('src/pages/dashboard/permission')
 const ParamsPage = lazy(() => import('src/pages/dashboard/params'));
 const SubpathsPage = lazy(() => import('src/pages/dashboard/subpaths'));
 const BlankPage = lazy(() => import('src/pages/dashboard/blank'));
+// Schedule
+const SchedulePage = lazy(() => import('src/pages/dashboard/schedule'));
 
 // ----------------------------------------------------------------------
 
@@ -130,12 +139,11 @@ export const dashboardRoutes: RouteObject[] = [
       {
         path: 'client',
         children: [
-          { index: true, element: <UserProfilePage /> },
-          { path: 'profile', element: <UserProfilePage /> },
-          { path: 'cards', element: <UserCardsPage /> },
-          { path: 'list', element: <UserListPage /> },
-          { path: 'new', element: <UserCreatePage /> },
-          { path: ':id/edit', element: <UserEditPage /> },
+          { index: true, element: <ClientListPage /> },
+          { path: 'list', element: <ClientListPage /> },
+          { path: 'new', element: <ClientCreatePage /> },
+          { path: ':id', element: <ClientProfilePage /> },
+          { path: ':id/edit', element: <ClientEditPage /> },
           {
             path: 'account',
             element: accountLayout(),
@@ -221,6 +229,7 @@ export const dashboardRoutes: RouteObject[] = [
           { path: ':id/edit', element: <TourEditPage /> },
         ],
       },
+      { path: 'schedule', element: <SchedulePage /> },
       { path: 'file-manager', element: <FileManagerPage /> },
       { path: 'mail', element: <MailPage /> },
       { path: 'chat', element: <ChatPage /> },

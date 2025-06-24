@@ -89,10 +89,6 @@ export const navData: NavSectionProps['data'] = [
         title: 'Clients',
         path: paths.dashboard.client.root,
         icon: ICONS.user,
-        children: [
-          { title: 'All clients', path: paths.dashboard.client.list },
-          { title: 'Service log', path: paths.dashboard.servicelog.root },
-        ],
       },
       {
         title: 'Project & Quotes',
@@ -147,7 +143,19 @@ export const navData: NavSectionProps['data'] = [
         ),
       },
       { title: 'Chat', path: paths.dashboard.chat, icon: ICONS.chat },
-      { title: 'Calendar & Scheduling', path: paths.dashboard.calendar, icon: ICONS.calendar },
+      {
+        title: 'Dispatcher',
+        path: paths.dashboard.calendar,
+        icon: ICONS.calendar,
+        children: [
+          { title: 'Schedule', path: paths.dashboard.schedule },
+          { title: 'All Jobs', path: paths.dashboard.job.root },
+          // { title: 'Technicians', path: paths.dashboard.job.root },
+          // { title: 'Quotes', path: paths.dashboard.project.root },
+          // { title: 'Map', path: paths.dashboard.calendar },
+          // { title: 'Memberships', path: paths.dashboard.calendar },
+        ],
+      },
       { title: 'Kanban', path: paths.dashboard.kanban, icon: ICONS.kanban },
     ],
   },

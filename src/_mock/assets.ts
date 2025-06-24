@@ -672,3 +672,27 @@ export const _descriptions = [
   `Ipsam aliquam velit nobis repellendus officiis aut deserunt id et. Nihil sunt aut dolores aut. Dolores est ipsa quia et laborum quidem laborum accusamus id. Facilis odit quod hic laudantium saepe omnis nisi in sint. Sed cupiditate possimus id.`,
   `Magnam non eveniet optio optio ut aliquid atque. Velit libero aspernatur quis laborum consequatur laudantium. Tempora facere optio fugit accusantium ut. Omnis aspernatur reprehenderit autem esse ut ut enim voluptatibus.`,
 ];
+
+export const _date = [
+  `2025-01-01`,
+  `2025-01-02`,
+  `2025-01-03`,
+  `2025-01-04`,
+  `2025-01-05`,
+  `2025-01-06`,
+  `2025-01-07`,
+  `2025-01-08`,
+  `2025-01-09`,
+  `2025-01-10`,
+  `2025-01-11`,
+  `2025-01-12`,
+  `2025-01-13`,
+  '2025-06-19',
+  '2025-06-18',
+  '2025-06-17',
+  '2025-06-16',
+  '2025-06-15',
+  '2025-06-14',
+  '2025-06-13',
+  '2025-06-12',
+];
