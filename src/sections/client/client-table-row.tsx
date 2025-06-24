@@ -140,7 +140,7 @@ export function ClientTableRow({ row, selected, editHref, onSelectRow, onDeleteR
           </Box>
         </TableCell>
 
-        <TableCell sx={{ whiteSpace: 'nowrap' }}>{row.address}</TableCell>
+        <TableCell sx={{ whiteSpace: 'nowrap' }}>{row.addresses[0].address || ''}</TableCell>
 
         <TableCell sx={{ whiteSpace: 'nowrap' }}>{row.email}</TableCell>
 

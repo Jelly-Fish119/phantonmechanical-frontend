@@ -1,4 +1,4 @@
-import type { IUserItem } from 'src/types/user';
+import { IClientItem } from 'src/types/client';
 
 import { z as zod } from 'zod';
 import { useForm } from 'react-hook-form';
@@ -49,7 +49,7 @@ export const ClientQuickEditSchema = zod.object({
 type Props = {
   open: boolean;
   onClose: () => void;
-  currentUser?: IUserItem;
+  currentUser?: IClientItem;
 };
 
 export function ClientQuickEditForm({ currentUser, open, onClose }: Props) {
@@ -71,7 +71,14 @@ export function ClientQuickEditForm({ currentUser, open, onClose }: Props) {
     mode: 'all',
     resolver: zodResolver(ClientQuickEditSchema),
     defaultValues,
-    values: currentUser,
+    values: currentUser
+      ? {
+          ...currentUser,
+          address: currentUser.addresses[0].address || '',
+          state: currentUser.addresses[0].state || '',
+          city: currentUser.addresses[0].city || '',
+        }
+      : undefined,
   });
 
   const {

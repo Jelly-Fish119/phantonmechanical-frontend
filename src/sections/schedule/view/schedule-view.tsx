@@ -20,7 +20,7 @@ import { CustomBreadcrumbs } from 'src/components/custom-breadcrumbs';
 import { Iconify } from 'src/components/iconify';
 
 import { paths } from 'src/routes/paths';
-import CalendarForm from '../calendar-form';
+import { CalendarForm } from '../calendar-form';
 // ----------------------------------------------------------------------
 
 export function ScheduleView() {
@@ -84,11 +84,10 @@ export function ScheduleView() {
   };
 
   const handleEventClick = (clickInfo: any) => {
-    // if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
-    //   clickInfo.event.remove();
-    //   setEvents(events.filter((event) => event.id !== clickInfo.event.id));
-    // }
-    return <CalendarForm />;
+    if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
+      clickInfo.event.remove();
+      setEvents(events.filter((event) => event.id !== clickInfo.event.id));
+    }
   };
 
   const handleDateChange = (newDate: any) => {
